@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+}
+
+
+:root{
+    --bg-solid--light: rgb(250, 250, 250);
+    --bg-solid--dark: rgb(24, 24, 24);
+    --bg-transparency: rgba(250, 250, 250, 0.9);
+    --light-color: #FAFAFA;
+    --dark-color: #141414;
+    --grey-color-light: #d5d5d5;
+    --grey-color-mid: #9B9B9B;
+    --grey-color-dark: #666666;
+    --accent-orange: #E8871E;
+    --accent-green: #328527;
+    --accent-red: #8F250C;
+}
+
+body{
+    max-width: 100%;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+main{
+    margin-top: 60px;
+    padding-top: 0.2rem;
+}
+
+.hero-img{
+    padding: 0.2rem 0.2rem;
+    width: 100%;
+    height: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+}
+
+.wrapper{
+    max-width: 100%;
+}
+.hero-content li{
+    color: var(--grey-color-dark);
+    padding: 0.8em 0;
+    width: 100%;
+}
+
+.hero-content li:hover{
+    transform: scale(1.1);
+    color: var(--dark-color);
+}
+
+.form-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container{
+    width: 85%;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.3em 1em 1.2em 1.2em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-container .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-container .form-content .left-side{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    margin-top: 0.9em;
+    position: relative;
+}
+
+/*Division bar in form*/
+.form-content .left-side::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -25%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--grey-color-mid);
+}
+
+.form-content .left-side .details{
+    margin: 0.8em;
+    text-align: center;
+}
+
+.form-content .left-side .details i{
+    font-size: 2.4rem;
+    color: var(--grey-color-light);
+    margin-bottom: 10px;
+}
+
+.form-content .left-side .details .topic{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form-content .left-side .details .text-one{
+    font-size: 1.2vw;
+    color: var(--grey-color-dark);
+}
+
+.form-container .form-content .right-side{
+    width: 75%;
+    margin-left: 5em;
+}
+
+.form-content .right-side .topic-text{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.right-side .input-box{
+    height: 3.1rem;
+    width: 100%;
+    margin: 0.7em 0;
+}
+
+.right-side .input-box input,
+.right-side .input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    background: var(--grey-color-light);
+    padding: 0 15px;
+    resize: none;
+}
+
+.right-side .message-box{
+    min-height: 6.3rem;
+}
+
+.right-side .input-box textarea{
+    padding-top: 0.8em;
+}
+
+.right-side .button{
+    display: inline-block;
+    margin: 10px;
+}
+
+.right-side .button input[type="button"]{
+    color: var(--dark-color);
+    font-size: 1.1rem;
+    background: var(--grey-color-mid);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin-left: 0.7em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button input[type="button"]:hover{
+    background: rgb(65, 65, 229);
+    color: var(--light-color);
+}
+
+.image-grid figure{
+    margin-bottom: 0;
+    height: 100%;
+    position: relative;
+    
+}
+.image-grid .d-block{
+    height: 100%;
+}
+.image-grid img {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s;
+    max-width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.overlay h5{
+    color: var(--light-color);
+}
+
+.image-grid .overlay:hover{
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(233,221,226,0.44030112044817926) 0%, rgba(14,17,21,0.4431022408963585) 100%);
+    mix-blend-mode: difference;
+}
+
+.image-grid a:hover img {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.35);
+}
+  /* LIGHTBOX STYLES 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .lightbox-modal .modal-content {
+    background: var(--lightbox);
+  }
+  .lightbox-modal .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    font-size: 1.2rem;
+    z-index: 10;
+  }
+  .lightbox-modal .modal-body {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+    max-height: 100vh;
+  }
+
+ .gallery-slider img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+@media only screen and (max-width: 768px){
+    .hero-img{
+        width: 100%;
+        height: 100%;
+        max-height: 57vh;
+        object-fit: cover;
+    }
+
+    .hero-content{
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .form-container{
+        margin: 2.5rem 0;
+        height: 100%;
+    }
+
+    .form-container .form-content{
+        flex-direction: column-reverse;
+    }
+
+    .form-container .form-content .left-side{
+        width: 100%;
+        flex-direction: row;
+        margin-top: 0.5em;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .form-content .left-side .details .text-one{
+        font-size: 3vw;
+
+    }
+
+    .form-container .form-content .left-side::before{
+        display: none;
+    }
+
+    .form-container .form-content .right-side{
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
+
