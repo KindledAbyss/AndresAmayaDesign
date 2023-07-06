@@ -169,7 +169,7 @@ main{
     margin: 10px;
 }
 
-.right-side .button #form_button[type="submit"]{
+#form_button{
     color: var(--dark-color);
     font-size: 1.1rem;
     background: var(--grey-color-mid);
@@ -182,7 +182,7 @@ main{
     transition: all 0.2s ease;
 }
 
-.button #form_button[type="submit"]:hover{
+#form_button:hover{
     background: rgb(65, 65, 229);
     color: var(--light-color);
 }
