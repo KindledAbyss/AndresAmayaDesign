@@ -169,7 +169,7 @@ main{
     margin: 10px;
 }
 
-.right-side .button input[type="button"]{
+.right-side .button button[type="submit"]{
     color: var(--dark-color);
     font-size: 1.1rem;
     background: var(--grey-color-mid);
@@ -182,7 +182,7 @@ main{
     transition: all 0.2s ease;
 }
 
-.button input[type="button"]:hover{
+.button button[type="submit"]:hover{
     background: rgb(65, 65, 229);
     color: var(--light-color);
 }
