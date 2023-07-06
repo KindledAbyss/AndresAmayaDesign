@@ -182,21 +182,22 @@
                         </div>
                         <div class="right-side">
                           <div class="topic-text">Comunícate</div>
-                            <form action="">
+                            <form action="https://formsubmit.co/contacto@andresamaya.design" method="POST">
                               <div class="input-box">
-                                <input type="text" placeholder="Nombre" name="Nombre" title="Nombre" id="name">
+                                <input type="text" placeholder="Nombre" name="Nombre" title="Nombre" id="name" required>
                               </div>
                               <div class="input-box">
-                                <input type="text" placeholder="Correo electrónico" title ="Correo electrónico" name="Correo" id="correo">
+                                <input type="email" placeholder="Correo electrónico" title ="Correo electrónico" name="Correo" id="correo" required>
                               </div>
                               <div class="input-box message-box">
                                 <textarea placeholder="Mensaje" title="Mensaje"></textarea>
                               </div>
                               <div class="button">
-                                <input type="button" value="Enviar" data-bs-dismiss="modal">
+                                <button type="submit" data-bs-dismiss="modal" class="form_button">Enviar</button>
                               </div>
+                                <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
                               <div class="button">
-                                <input type="button" value="Cerrar" data-bs-dismiss="modal">
+                                <input type="button" value="Cerrar" data-bs-dismiss="modal" class="form_button">
                               </div>
                             </form>
                           </div>
