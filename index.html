@@ -39,7 +39,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <button type="button" class="btn btn-outline-dark"><a href="#contacto" class="text-reset text-decoration-none">CONTACTO</a></button>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">CONTACTO</button>
                         </li>
 
                     </ul>
@@ -65,7 +65,7 @@
               </div>
             </div>
             <div class="col-md-4 col-lg-3 hero-content">
-                <h2 class="text-center">Explora las colecciones</h2>
+                <h2 class="text-center">Colecciones</h2>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item text-center"><a href="mobiliario.html" class="text-decoration-none text-reset">MUEBLES</a></li>
                   <li class="list-group-item text-center"><a href="esculturas.html" class="text-decoration-none text-reset">ESCULTURAS</a></li>
@@ -77,42 +77,57 @@
             </div>
         </div>
     </main>
-    <section class="form-wrapper" id="contacto">
-      <div class="form-container">
-        <div class="form-content">
-          <div class="left-side">
-            <div class="email details">
-              <i class="uil uil-envelope-edit"></i>
-                <div class="topic">Correo</div>
-                  <div class="text-one">andres.amaya@gmail.com</div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Contacto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="phone details">
-              <i class="uil uil-phone"></i>
-                <div class="topic">Teléfono</div>
-                <div class="text-one">+52 55 5555 5555</div>
-            </div>
-          </div>
-          <div class="right-side">
-            <div class="topic-text">Comunícate</div>
-              <form action="https://formsubmit.co/contacto@andresamaya.design" method="POST">
-                <div class="input-box">
-                  <input type="text" placeholder="Nombre" name="name" title="Nombre" id="name" required>
-                </div>
-                <div class="input-box">
-                  <input type="email" placeholder="Correo electrónico" title ="Correo electrónico" name="email" id="correo" required>
-                </div>
-                <div class="input-box message-box">
-                  <textarea placeholder="Mensaje" title="Mensaje" name="text" type="text" ></textarea>
-                </div>
-                <input type="hidden" name="_next" value="http://andresamaya.design/mensaje.html">
-                <div class="button">
-                  <button type="submit" class="form_button">Enviar</button>
-                </div>
-              </form>
+            <div class="modal-body">
+                <div class="form-wrapper">
+                    <div class="form-container">
+                      <div class="form-content">
+                        <div class="left-side">
+                          <div class="email details">
+                            <i class="uil uil-envelope-edit"></i>
+                              <div class="topic">Correo</div>
+                                <div class="text-one">andres.amaya@gmail.com</div>
+                          </div>
+                          <div class="phone details">
+                            <i class="uil uil-phone"></i>
+                              <div class="topic">Teléfono</div>
+                              <div class="text-one">+52 55 5555 5555</div>
+                          </div>
+                        </div>
+                        <div class="right-side">
+                          <div class="topic-text">Comunícate</div>
+                            <form action="https://formsubmit.co/contacto@andresamaya.design" method="POST">
+                              <div class="input-box">
+                                <input type="text" placeholder="Nombre" name="Nombre" title="Nombre" id="name">
+                              </div>
+                              <div class="input-box">
+                                <input type="email" placeholder="Correo electrónico" title ="Correo electrónico" name="Correo" id="correo">
+                              </div>
+                              <div class="input-box message-box">
+                                <textarea placeholder="Mensaje" title="Mensaje"></textarea>
+                              </div>
+                              <div class="button">
+                                <button type="button" class="form_button" data-bs-dismiss="modal">Enviar</button>
+                              </div>
+                              <div class="button">
+                                <input type="button" value="Cerrar" class="form_button" data-bs-dismiss="modal">
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
             </div>
           </div>
         </div>
-    </section>
+      </div>
     <footer class="bg-dark text-center text-white">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
